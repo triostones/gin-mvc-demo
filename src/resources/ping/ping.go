@@ -10,8 +10,9 @@ import (
 func get(c *gin.Context) {
 
 	c.JSON(http.StatusOK, gin.H{
-		"code":    http.StatusOK,
-		"message": "success",
+		"status":  http.StatusOK,
+		"success": true,
+		"message": "",
 		"item":    (&services.PingService{}).Ping(),
 	})
 }
