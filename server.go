@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/triostones/triostones-backend-gin/src/config"
-	"github.com/triostones/triostones-backend-gin/src/entity"
+	"github.com/triostones/triostones-backend-gin/src/models"
 	"github.com/triostones/triostones-backend-gin/src/resources"
 )
 
@@ -11,7 +11,7 @@ func main() {
 
 	config.Initialize()
 
-	entity.AutoMigrate()
+	models.AutoMigrate()
 
 	engine := gin.Default()
 

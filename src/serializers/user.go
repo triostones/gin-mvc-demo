@@ -1,6 +1,6 @@
 package serializers
 
-import "github.com/triostones/triostones-backend-gin/src/entity"
+import "github.com/triostones/triostones-backend-gin/src/models"
 
 type User struct {
 	ID        uint   `json:"id" binding:"required"`
@@ -10,7 +10,7 @@ type User struct {
 	UpdatedAt string `json:"updated_at" binding:"required"`
 }
 
-func (user *User) Dump(userEntity *entity.UserEntity) *User {
+func (user *User) Dump(userEntity *models.UserModel) *User {
 	user.ID = userEntity.ID
 	user.Username = userEntity.Username
 	user.Email = userEntity.Email

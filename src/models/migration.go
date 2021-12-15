@@ -1,4 +1,4 @@
-package entity
+package models
 
 import (
 	"github.com/triostones/triostones-backend-gin/src/config"
@@ -7,12 +7,12 @@ import (
 )
 
 func initDatabase() {
-	user := UserEntity{}
-	utils.DB.Where(&UserEntity{Email: config.ADMIN_EMAIL}).First(&user)
+	user := UserModel{}
+	utils.DB.Where(&UserModel{Email: config.ADMIN_EMAIL}).First(&user)
 	if user.ID == 0 {
 		passwordHash, _ := bcrypt.GenerateFromPassword(
 			[]byte(config.ADMIN_PASSWORD), bcrypt.DefaultCost)
-		utils.DB.Create(&UserEntity{
+		utils.DB.Create(&UserModel{
 			Email:    config.ADMIN_EMAIL,
 			Password: string(passwordHash),
 			Username: config.ADMIN_USERNAME,
@@ -21,6 +21,6 @@ func initDatabase() {
 }
 
 func AutoMigrate() {
-	utils.DB.AutoMigrate(&UserEntity{})
+	utils.DB.AutoMigrate(&UserModel{})
 	initDatabase()
 }

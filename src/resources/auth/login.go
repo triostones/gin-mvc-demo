@@ -5,7 +5,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/triostones/triostones-backend-gin/src/config"
-	"github.com/triostones/triostones-backend-gin/src/entity"
+	"github.com/triostones/triostones-backend-gin/src/models"
 	"github.com/triostones/triostones-backend-gin/src/serializers/responses"
 	"github.com/triostones/triostones-backend-gin/src/services"
 	"github.com/triostones/triostones-backend-gin/src/validators"
@@ -47,7 +47,7 @@ func (resource *LoginResource) post(rg *gin.RouterGroup) {
 			}
 		},
 		func(c *gin.Context) {
-			user := c.MustGet(config.CONTEXT_SERIALIZER_KEY).(entity.UserEntity)
+			user := c.MustGet(config.CONTEXT_SERIALIZER_KEY).(models.UserModel)
 			c.JSON(http.StatusOK, gin.H{
 				"status":  http.StatusOK,
 				"message": "",
