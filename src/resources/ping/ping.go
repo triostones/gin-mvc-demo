@@ -7,16 +7,32 @@ import (
 	"github.com/triostones/triostones-backend-gin/src/services"
 )
 
-func get(c *gin.Context) {
-
-	c.JSON(http.StatusOK, gin.H{
-		"status":  http.StatusOK,
-		"success": true,
-		"message": "",
-		"item":    (&services.PingService{}).Ping(),
-	})
+type PingResource struct {
+	path string
 }
 
-func registerPing(rg *gin.RouterGroup) {
-	rg.GET("/", get)
+func (resource *PingResource) get(rg *gin.RouterGroup) {
+	rg.GET(resource.path,
+		func(c *gin.Context) {
+			c.JSON(http.StatusOK, gin.H{
+				"status":  http.StatusOK,
+				"success": true,
+				"message": "",
+				"item":    (&services.PingService{}).Ping(),
+			})
+		},
+	)
+}
+
+func (resource *PingResource) post(rg *gin.RouterGroup) {
+	rg.POST(resource.path,
+		func(c *gin.Context) {
+			c.JSON(http.StatusOK, gin.H{
+				"status":  http.StatusOK,
+				"success": true,
+				"message": "",
+				"item":    (&services.PingService{}).Ping(),
+			})
+		},
+	)
 }

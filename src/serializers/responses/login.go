@@ -13,7 +13,7 @@ type LoginResponse struct {
 
 func (login *LoginResponse) Dump(user *models.UserModel) *LoginResponse {
 	login.User.Dump(user)
-	access_token, _ := utils.GenerateAccessToken(user.Email)
+	access_token, _ := utils.GenerateAccessToken(user.ID, user.Email)
 	login.AccessToken = access_token
 	return login
 }

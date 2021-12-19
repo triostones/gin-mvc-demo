@@ -6,4 +6,8 @@ import (
 	"gorm.io/gorm"
 )
 
-var DB, _ = gorm.Open(sqlite.Open(config.DATABASE_URI), &gorm.Config{})
+var DB *gorm.DB
+
+func init() {
+	DB, _ = gorm.Open(sqlite.Open(config.DATABASE_URI), &gorm.Config{})
+}

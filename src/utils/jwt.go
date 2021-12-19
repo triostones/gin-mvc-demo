@@ -3,9 +3,9 @@ package utils
 import (
 	"time"
 
-	"github.com/golang-jwt/jwt"
-	"github.com/triostones/triostones-backend-gin/src/config"
+	"github.com/golang-jwt/jwt/v4"
 	"github.com/google/uuid"
+	"github.com/triostones/triostones-backend-gin/src/config"
 )
 
 type Claims struct {
@@ -13,14 +13,13 @@ type Claims struct {
 	jwt.StandardClaims
 }
 
-func GenerateAccessToken(email string) (string, error) {
+func GenerateAccessToken(id uint, email string) (string, error) {
 	jti, _ := uuid.NewRandom()
-	claims := Claims{
-		email,
-		jwt.StandardClaims{
-			ExpiresAt: time.Now().Add(time.Hour * config.JWT_ACCESS_TOKEN_EXPIRE_TIME).Unix(),
-			Id: jti.String(),
-		},
+	claims := jwt.MapClaims{
+		"id": id,
+		"email": email,
+		"jti":   jti.String(),
+		"exp":   time.Now().Add(time.Hour * config.JWT_ACCESS_TOKEN_EXPIRE_TIME).Unix(),
 	}
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
 	signedString, err := token.SignedString([]byte(config.JWT_SECRET_KEY))

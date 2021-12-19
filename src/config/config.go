@@ -14,7 +14,7 @@ var ADMIN_EMAIL = os.Getenv("ADMIN_EMAIL")
 
 var JWT_SECRET_KEY = os.Getenv("JWT_SECRET_KEY")
 
-func Initialize() {
+func init() {
 	if ADMIN_EMAIL == "" {
 		ADMIN_EMAIL = "admin@triostones.com"
 	}
