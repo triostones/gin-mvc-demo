@@ -47,11 +47,11 @@ func (resource *LoginResource) post(rg *gin.RouterGroup) {
 			}
 		},
 		func(c *gin.Context) {
-			user := c.MustGet(config.CONTEXT_SERIALIZER_KEY).(models.UserModel)
+			user := c.MustGet(config.CONTEXT_SERIALIZER_KEY).(*models.UserModel)
 			c.JSON(http.StatusOK, gin.H{
 				"status":  http.StatusOK,
 				"message": "",
-				"item":    (&responses.LoginResponse{}).Dump(&user),
+				"item":    (&responses.LoginResponse{}).Dump(user),
 			})
 		},
 	)
