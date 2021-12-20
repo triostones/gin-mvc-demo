@@ -5,7 +5,7 @@ import (
 
 	"github.com/golang-jwt/jwt/v4"
 	"github.com/google/uuid"
-	"github.com/triostones/triostones-backend-gin/src/config"
+	"github.com/triostones/gin-mvc-demo/src/config"
 )
 
 type Claims struct {
@@ -16,7 +16,7 @@ type Claims struct {
 func GenerateAccessToken(id uint, email string) (string, error) {
 	jti, _ := uuid.NewRandom()
 	claims := jwt.MapClaims{
-		"id": id,
+		"id":    id,
 		"email": email,
 		"jti":   jti.String(),
 		"exp":   time.Now().Add(time.Hour * config.JWT_ACCESS_TOKEN_EXPIRE_TIME).Unix(),

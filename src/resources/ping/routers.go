@@ -2,7 +2,7 @@ package ping
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/triostones/triostones-backend-gin/src/middleware"
+	"github.com/triostones/gin-mvc-demo/src/middleware"
 )
 
 func RegisterPingGroup(engine *gin.Engine) {

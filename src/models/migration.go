@@ -1,8 +1,8 @@
 package models
 
 import (
-	"github.com/triostones/triostones-backend-gin/src/config"
-	"github.com/triostones/triostones-backend-gin/src/utils"
+	"github.com/triostones/gin-mvc-demo/src/config"
+	"github.com/triostones/gin-mvc-demo/src/utils"
 	"golang.org/x/crypto/bcrypt"
 )
 

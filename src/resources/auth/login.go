@@ -4,11 +4,11 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/triostones/triostones-backend-gin/src/config"
-	"github.com/triostones/triostones-backend-gin/src/models"
-	"github.com/triostones/triostones-backend-gin/src/serializers/responses"
-	"github.com/triostones/triostones-backend-gin/src/services"
-	"github.com/triostones/triostones-backend-gin/src/validators"
+	"github.com/triostones/gin-mvc-demo/src/config"
+	"github.com/triostones/gin-mvc-demo/src/models"
+	"github.com/triostones/gin-mvc-demo/src/serializers/responses"
+	"github.com/triostones/gin-mvc-demo/src/services"
+	"github.com/triostones/gin-mvc-demo/src/validators"
 )
 
 type LoginResource struct {

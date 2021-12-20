@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/triostones/triostones-backend-gin/src/services"
+	"github.com/triostones/gin-mvc-demo/src/services"
 )
 
 type PingResource struct {

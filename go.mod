@@ -1,4 +1,4 @@
-module github.com/triostones/triostones-backend-gin
+module github.com/triostones/gin-mvc-demo
 
 go 1.17
 
