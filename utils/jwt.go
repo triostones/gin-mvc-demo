@@ -1,11 +1,11 @@
 package utils
 
 import (
+	"github.com/triostones/gin-mvc-demo/config"
 	"time"
 
 	"github.com/golang-jwt/jwt/v4"
 	"github.com/google/uuid"
-	"github.com/triostones/gin-mvc-demo/src/config"
 )
 
 type Claims struct {

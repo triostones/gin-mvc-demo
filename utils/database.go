@@ -1,7 +1,7 @@
 package utils
 
 import (
-	"github.com/triostones/gin-mvc-demo/src/config"
+	"github.com/triostones/gin-mvc-demo/config"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 )

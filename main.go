@@ -2,8 +2,8 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/triostones/gin-mvc-demo/src/models"
-	"github.com/triostones/gin-mvc-demo/src/resources"
+	"github.com/triostones/gin-mvc-demo/models"
+	"github.com/triostones/gin-mvc-demo/resources"
 )
 
 func main() {

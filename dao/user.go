@@ -2,8 +2,8 @@ package dao
 
 import (
 	"github.com/jinzhu/gorm"
-	"github.com/triostones/gin-mvc-demo/src/models"
-	"github.com/triostones/gin-mvc-demo/src/utils"
+	"github.com/triostones/gin-mvc-demo/models"
+	"github.com/triostones/gin-mvc-demo/utils"
 )
 
 type UserDao struct{}

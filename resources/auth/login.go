@@ -1,14 +1,14 @@
 package auth
 
 import (
+	"github.com/triostones/gin-mvc-demo/config"
+	"github.com/triostones/gin-mvc-demo/models"
+	"github.com/triostones/gin-mvc-demo/serializers/responses"
+	"github.com/triostones/gin-mvc-demo/services"
+	"github.com/triostones/gin-mvc-demo/validators"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/triostones/gin-mvc-demo/src/config"
-	"github.com/triostones/gin-mvc-demo/src/models"
-	"github.com/triostones/gin-mvc-demo/src/serializers/responses"
-	"github.com/triostones/gin-mvc-demo/src/services"
-	"github.com/triostones/gin-mvc-demo/src/validators"
 )
 
 type LoginResource struct {

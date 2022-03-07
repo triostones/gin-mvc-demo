@@ -1,6 +1,8 @@
 package serializers
 
-import "github.com/triostones/gin-mvc-demo/src/models"
+import (
+	"github.com/triostones/gin-mvc-demo/models"
+)
 
 type User struct {
 	ID        uint   `json:"id" binding:"required"`

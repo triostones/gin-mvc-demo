@@ -3,9 +3,9 @@ package middleware
 import (
 	jwt "github.com/appleboy/gin-jwt/v2"
 	"github.com/gin-gonic/gin"
-	"github.com/triostones/gin-mvc-demo/src/config"
-	"github.com/triostones/gin-mvc-demo/src/dao"
-	"github.com/triostones/gin-mvc-demo/src/models"
+	"github.com/triostones/gin-mvc-demo/config"
+	"github.com/triostones/gin-mvc-demo/dao"
+	"github.com/triostones/gin-mvc-demo/models"
 )
 
 var JWT *jwt.GinJWTMiddleware

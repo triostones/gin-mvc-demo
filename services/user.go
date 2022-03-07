@@ -1,8 +1,8 @@
 package services
 
 import (
-	"github.com/triostones/gin-mvc-demo/src/dao"
-	"github.com/triostones/gin-mvc-demo/src/models"
+	"github.com/triostones/gin-mvc-demo/dao"
+	"github.com/triostones/gin-mvc-demo/models"
 	"golang.org/x/crypto/bcrypt"
 )
 

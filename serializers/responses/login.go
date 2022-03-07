@@ -1,9 +1,9 @@
 package responses
 
 import (
-	"github.com/triostones/gin-mvc-demo/src/models"
-	"github.com/triostones/gin-mvc-demo/src/serializers"
-	"github.com/triostones/gin-mvc-demo/src/utils"
+	"github.com/triostones/gin-mvc-demo/models"
+	"github.com/triostones/gin-mvc-demo/serializers"
+	"github.com/triostones/gin-mvc-demo/utils"
 )
 
 type LoginResponse struct {

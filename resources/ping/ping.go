@@ -1,10 +1,10 @@
 package ping
 
 import (
+	"github.com/triostones/gin-mvc-demo/services"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/triostones/gin-mvc-demo/src/services"
 )
 
 type PingResource struct {
